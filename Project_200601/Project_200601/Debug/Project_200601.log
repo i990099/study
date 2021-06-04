@@ -1,0 +1,4 @@
+﻿  test2.c
+D:\visualstudio\source\repos\Project_200601\Project_200601\test2.c(9,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
+D:\visualstudio\source\repos\Project_200601\Project_200601\test2.c(10,1): warning C4047: “初始化”:“int *”与“int (*)[5]”的间接级别不同
+  Project_200601.vcxproj -> D:\visualstudio\source\repos\Project_200601\Debug\Project_200601.exe
