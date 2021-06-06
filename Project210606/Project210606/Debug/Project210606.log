@@ -1,0 +1,6 @@
+﻿  test.c
+D:\visualstudio\source\repos\Project210606\Project210606\test.c(17,13): warning C4013: “gets”未定义；假设外部返回 int
+D:\visualstudio\source\repos\Project210606\Project210606\test.c(17,29): warning C4047: “!=”:“int”与“void *”的间接级别不同
+D:\visualstudio\source\repos\Project210606\Project210606\test.c(23,15): warning C4013: “strlen”未定义；假设外部返回 int
+D:\visualstudio\source\repos\Project210606\Project210606\test.c(29,10): warning C4013: “strcpy”未定义；假设外部返回 int
+  Project210606.vcxproj -> D:\visualstudio\source\repos\Project210606\Debug\Project210606.exe
