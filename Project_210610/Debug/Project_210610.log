@@ -1,0 +1,5 @@
+﻿  test1.c
+D:\visualstudio\source\repos\Project_210610\test1.c(86,10): warning C4047: “函数”:“int (*)[0]”与“int [5]”的间接级别不同
+D:\visualstudio\source\repos\Project_210610\test1.c(86,7): warning C4024: “test”: 形参和实参 1 的类型不同
+D:\visualstudio\source\repos\Project_210610\test1.c(85,1): warning C4048: “int (*)[0]”和“int (*)[5]”数组的下标不同
+  Project_210610.vcxproj -> D:\visualstudio\source\repos\Project_210610\Debug\Project_210610.exe
