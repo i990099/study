@@ -1,0 +1,3 @@
+﻿  test1.c
+D:\visualstudio\source\repos\Project_210616\test1.c(49): warning C4716: “my_strlen”: 必须返回一个值
+  Project_210616.vcxproj -> D:\visualstudio\source\repos\Project_210616\Debug\Project_210616.exe
