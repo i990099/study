@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS 0
 #include "contact.h"
 
 /*实现函数功能*/
@@ -78,7 +77,7 @@ void AddContact(struct Contact* ps) {
 		
 		char name[MAX_NAME];
 
-		printf("请输入姓名\n");
+		printf("请输入姓名->");
 		scanf("%s", name);
 
 		//查找被删除人的位置
@@ -130,5 +129,183 @@ void AddContact(struct Contact* ps) {
 		}
 	
 	}
+	void Menu() {
+
+		printf("***********************************************\n");
+		printf("***********************************************\n");
+		printf("********   1. Name          2. Age     ********\n");
+		printf("********   3. Sex           4. Tele    ********\n");
+		printf("********   5. Addr          0. Finish   *******\n");
+		printf("***********************************************\n");
+		printf("***********************************************\n");
+	
+	}
+	//修改联系人
+	void ModifyContact(struct Contact* ps) {
+		
+		char name[MAX_NAME];
+		printf("请输入修改人的名字\n");
+		
+		scanf("%s", name);
+
+		int pos = FindByName(ps,name);
+
+		if (pos == -1) {
+			printf("没有找到要修改的人\n");
+		}
+		else {
+			int input = 0;
+			do {
+				Menu();
+				printf("请选择要修改的选项-> ");
+				scanf("%d", &input);
+
+				switch (input)
+				{
+				case NAME:
+					printf("请输入要修改的姓名:> ");
+					scanf("%s", ps->data[pos].name);
+					break;
+				case AGE:
+					printf("请输入要修改的年龄:> ");
+					scanf("%d", &(ps->data[pos].age));
+					break;
+				case SEX:
+					printf("请输入要修改的性别:> ");
+					scanf("%s", ps->data[pos].sex);
+					break;
+				case TELE:
+					printf("请输入要修改的电话:> ");
+					scanf("%s", ps->data[pos].tele);
+					break;
+				case ADDR:
+					printf("请输入要修改的住址:> ");
+					scanf("%s", ps->data[pos].addr);
+					break;
+				case FINISH:
+					printf("退出\n");
+					break;
+				default:
+					printf("输入错误\n");
+					break;
+				}
+
+			} while (input);
+
+
+			printf("修改成功\n");
+
+		}
+	
+	}
+
+	int cmp_peoInfo_by_name(const void* e1, const void* e2) {
+
+		//比较两个整形的值
+		//大于0 表示 e1 大于e2
+		//小于0 表示 e1 小于 e2
+		//等于0 表示 e1 等于 e2
+
+		//字符串比较要用strcmp
+		return strcmp(((struct PeoInfo*)e1)->name, ((struct PeoInfo*)e2)->name);
+
+	}
+	int cmp_peoInfo_by_age(const void* e1, const void* e2) {
+
+		//比较两个整形的值
+		//大于0 表示 e1 大于e2
+		//小于0 表示 e1 小于 e2
+		//等于0 表示 e1 等于 e2
+
+		return (((struct PeoInfo*)e1)->age - ((struct PeoInfo*)e2)->age);
+
+	}
+
+	int cmp_peoInfo_by_sex(const void* e1, const void* e2) {
+
+		//比较两个整形的值
+		//大于0 表示 e1 大于e2
+		//小于0 表示 e1 小于 e2
+		//等于0 表示 e1 等于 e2
+
+		//字符串比较要用strcmp
+		return strcmp(((struct PeoInfo*)e1)->sex, ((struct PeoInfo*)e2)->sex);
+
+	}
+
+	int cmp_peoInfo_by_tele(const void* e1, const void* e2) {
+
+		//比较两个整形的值
+		//大于0 表示 e1 大于e2
+		//小于0 表示 e1 小于 e2
+		//等于0 表示 e1 等于 e2
+
+		//字符串比较要用strcmp
+		return strcmp(((struct PeoInfo*)e1)->tele, ((struct PeoInfo*)e2)->tele);
+
+	}
+
+	int cmp_peoInfo_by_addr(const void* e1, const void* e2) {
+
+		//比较两个整形的值
+		//大于0 表示 e1 大于e2
+		//小于0 表示 e1 小于 e2
+		//等于0 表示 e1 等于 e2
+
+		//字符串比较要用strcmp
+		return strcmp(((struct PeoInfo*)e1)->addr, ((struct PeoInfo*)e2)->addr);
+
+	}
+
+	//联系人排序 指定类型排序
+	void SortContact(struct Contact* ps) {
+
+		if (!ps->size) {
+			printf("通讯录为空 无法排序\n");
+		}
+		else {
+			int input = 0;
+			do {
+				Menu();
+				printf("请选择要排序的类型-> ");
+				scanf("%d", &input);
+
+				switch (input)
+				{
+				case NAME:
+					qsort(ps->data,ps->size,sizeof(ps->data[0]),cmp_peoInfo_by_name);
+					ShowContact(ps);
+					break;
+				case AGE:
+					qsort(ps->data, ps->size, sizeof(ps->data[0]), cmp_peoInfo_by_age);
+					ShowContact(ps);
+					break;
+				case SEX:
+					qsort(ps->data, ps->size, sizeof(ps->data[0]), cmp_peoInfo_by_sex);
+					ShowContact(ps);
+					break;
+				case TELE:
+					qsort(ps->data, ps->size, sizeof(ps->data[0]), cmp_peoInfo_by_tele);
+					ShowContact(ps);
+					break;
+				case ADDR:
+					qsort(ps->data, ps->size, sizeof(ps->data[0]), cmp_peoInfo_by_addr);
+					ShowContact(ps);
+					break;
+				case FINISH:
+					printf("退出\n");
+					break;
+				default:
+					printf("输入错误\n");
+					break;
+				}
+
+			} while (input);
+
+		}
+	
+	
+	}
+
 
 

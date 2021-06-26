@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 0
+
 
 #include "contact.h"
 
@@ -14,6 +14,7 @@ void menu() {
 	printf("********   0. Exit                     ********\n");
 	printf("***********************************************\n");
 	printf("***********************************************\n");
+
 
 }
 
@@ -36,6 +37,7 @@ int main() {
 			break;
 		case MODIFY:
 			//printf("修改联系人\n");
+			ModifyContact(&con);
 			break;
 		case SEARCH:
 			//printf("查找联系人\n");
@@ -51,6 +53,7 @@ int main() {
 			break;
 		case SORT:
 			//printf("排序\n");
+			SortContact(&con);
 			break;
 		case EXIT:
 			printf("退出\n");
@@ -65,3 +68,43 @@ int main() {
 
 	return 0;
 }
+
+
+////typedef struct Stu {
+////
+////	char name[10];
+////
+////	int age;
+////
+////}Stu;
+////
+////int main() {
+////
+////
+////	char* a = "abdadj;iaso";
+////
+////	char* b = "abffff";
+////
+////	char c[] = "abffff";
+////
+////	printf("%d\n",strlen(b));
+////	printf("%d\n", strlen(c));
+////	printf("%d\n", sizeof(c));
+////
+////	//int ret = memcmp(b,c, strlen(b));
+////
+////	Stu stu1 = { "cd",12 };
+////
+////	Stu stu2 = { "cd",12 };
+////
+////	int ret = memcmp(&stu1, &stu2, sizeof(Stu));
+////
+////	printf("%d\n", ret);
+////
+////
+////	return 0;
+////
+////}
+//
+//
+//
