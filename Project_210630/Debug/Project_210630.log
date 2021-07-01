@@ -1,0 +1,4 @@
+﻿  test1.c
+D:\visualstudio\source\repos\Project_210630\test1.c(164,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+D:\visualstudio\source\repos\Project_210630\test1.c(155,1): warning C4047: “初始化”:“int”与“int *”的间接级别不同
+  Project_210630.vcxproj -> D:\visualstudio\source\repos\Project_210630\Debug\Project_210630.exe
