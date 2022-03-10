@@ -1,0 +1,3 @@
+﻿  test1.c
+D:\visualstudio\source\repos\Project_0310\test1.c(61): warning C4172: 返回局部变量或临时变量的地址: cc
+  Project_0310.vcxproj -> D:\visualstudio\source\repos\Project_0310\Debug\Project_0310.exe
