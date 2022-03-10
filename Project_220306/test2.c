@@ -60,9 +60,10 @@ int main() {
 
 
 	//char* a[] = {"work","at","alibaba"};
-	//char** pa = a;
-	//pa++;//跳过了一个char* 类型的大小指向下一个char* 类型 也就是跳过了 4个字节的地址
-	//printf("%s\n", *pa);// at
+	//char** pa = a;//存放一级指针变量地址的变量属于二级指针变量
+	//pa++;//指针数组a赋值给pa 此时pa指向的是数组a 首元素的地址 pa++ 向后移动一个char**类型大小的步距 指向数组a第二个元素的地址
+	//printf("%s\n", *pa);// 因为pa此刻指向的是指针数组a第二个元素的地址 所以解引用拿到的是 “at” 中首元素‘a’的地址 类型是char* 最终打印 at
+	
 
 	char* c[] = {"ENTER","NEW","POINT","FIRST"};
 
