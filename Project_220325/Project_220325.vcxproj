@@ -142,6 +142,7 @@
     <ClCompile Include="bubbleSort.c" />
     <ClCompile Include="heapSort.c" />
     <ClCompile Include="insertsort.c" />
+    <ClCompile Include="mergeSort.c" />
     <ClCompile Include="quickSort.c" />
     <ClCompile Include="selectionSort.c" />
     <ClCompile Include="shellSort.c" />

@@ -39,5 +39,8 @@
     <ClCompile Include="quickSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="mergeSort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
